@@ -9,13 +9,13 @@ const toolbar = (props) =>{
    return (
 			<header className={classes.Toolbar}>
 				<div className={classes.DrawerToggleIcon}>
-				<DrawerToggle openMenu={props.openMenu} />
-                </div>
+					<DrawerToggle openMenu={props.openMenu} />
+				</div>
 				<div className={classes.Logo}>
 					<Logo />
 				</div>
 				<nav className={classes.DesktopOnly}>
-					<NavigationItems />
+					<NavigationItems isAuthenticated={props.isAuth} />
 				</nav>
 			</header>
 		);
