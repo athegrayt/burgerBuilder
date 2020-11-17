@@ -34,3 +34,14 @@ export const checkValidity =(value, rules) =>{
 
         return isValid;
     }
+
+    export const timeFormatConvert = (str) => {
+			const date = new Date(str);
+			let hours = date.getHours();
+			let min = date.getMinutes();
+			const suffix = hours >= 12 ? 'pm' : 'am';
+			hours = hours > 12 ? hours - 12 : hours;
+			hours = hours === '00' ? 12 : hours;
+			min = min <= 9 ? '0' + min : min;
+			return `${hours}:${min}${suffix}`;
+		};

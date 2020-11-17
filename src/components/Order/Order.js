@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {timeFormatConvert} from '../../shared/utility'
 import classes from './Order.module.css'
     
 const order = (props) =>{
@@ -25,8 +25,11 @@ const order = (props) =>{
        </span>
    })
    
+   const orderDate = `${new Date(`${props.date}`).toString().slice(0,15)} at ${timeFormatConvert(props.date)}`
+
     return(
        <div className={classes.Order}>
+           <p style={{fontWeight: 700}}>{orderDate}</p>
            <p>Ingredients: {ingredientOutput}</p>
            <p>Price: <strong>USD {props.price.toFixed(2)}</strong></p>
        </div>
