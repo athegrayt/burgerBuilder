@@ -1,0 +1,12 @@
+.OrderSummary{
+    color: black;
+}
+.OrderSummary .BTN{
+    display: flex;
+    justify-content: center;
+}
+
+.OrderSummary ul{
+    list-style-type: none;
+    font-weight: 700;
+}

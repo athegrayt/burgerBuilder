@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import CheckoutSummary from "../../components/Order/CheckoutSummary/CheckoutSummary";
 import ContactData from "./ContactData/ContactData";
 import * as actions from "../../store/actions/index";
+import classes from "./Checkout.module.css";
 class Checkout extends Component {
   // state = {
   //     ingredients: null,
@@ -29,7 +30,7 @@ class Checkout extends Component {
         <Redirect to="/" />
       ) : null;
       summary = (
-        <div>
+        <div className={classes.Checkout}>
           {purchasedRedirect}
           <CheckoutSummary
             ingredients={this.props.ings}
